@@ -16,6 +16,12 @@
         "url": "https://github.com"
     },
     "dependencies": {
+        "@azure/storage-blob": "^12.17.0",
+        "@pnp/common": "^2.15.0",
+        "@pnp/logging": "^4.0.1",
+        "@pnp/nodejs": "^4.0.1",
+        "@pnp/sp": "^4.0.1",
+        "axios": "^1.6.8",
         "botbuilder": "~4.22.1",
         "dotenv": "^8.2.0",
         "restify": "~10.0.0"

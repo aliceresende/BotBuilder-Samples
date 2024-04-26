@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
@@ -10,6 +11,12 @@ namespace Microsoft.BotBuilderSamples.EchoSkillBot.Bots
 {
     public class EchoBot : ActivityHandler
     {
+        private readonly IHttpClientFactory _clientFactory;
+
+        public EchoBot(IHttpClientFactory clientFactory)
+        {
+            _clientFactory = clientFactory;
+        }
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
             if (turnContext.Activity.Text.Contains("end") || turnContext.Activity.Text.Contains("stop"))

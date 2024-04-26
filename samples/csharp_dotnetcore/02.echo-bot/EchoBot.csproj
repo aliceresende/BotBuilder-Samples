@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.12.0-beta.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.7" />
     <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.22.3" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="17.9.5" />
+    <PackageReference Include="Microsoft.Graph" Version="5.49.0" />
+    <PackageReference Include="Microsoft.Graph.Communications.Core" Version="1.2.0.10563" />
   </ItemGroup>
 
   <ItemGroup>
