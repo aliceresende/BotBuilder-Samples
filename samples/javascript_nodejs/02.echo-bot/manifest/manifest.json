@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.botframework.com/schemas/skills/skill-manifest-2.1.json",
+  "id": "fileUploadSkill",
+  "name": "File Upload Skill",
+  "version": "1.0",
+  "endpoints": [
+    {
+      "name": "Default Endpoint",
+      "protocol": "BotFrameworkV3",
+      "description": "Default endpoint for File Upload Skill",
+      "endpointUrl": "https://your-bot-service-url/api/messages",
+      "msAppId": "Your-Microsoft-App-ID-associated-with-the-skill"
+    }
+  ],
+  "dispatchModels": {
+    "languages": {
+      "en-us": {
+        "intents": [
+          {
+            "type": "intent",
+            "name": "UploadFile",
+            "description": "Upload a file"
+          }
+        ],
+        "entities": [
+          {
+            "type": "entity",
+            "name": "file",
+            "description": "The file to upload"
+          }
+        ]
+      }
+    }
+  },
+  "activities": {
+    "uploadFile": {
+      "type": "event",
+      "name": "uploadFile",
+      "description": "Handle an upload file event",
+      "value": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "description": "Name of the file to be uploaded"
+          },
+          "fileUrl": {
+            "type": "string",
+            "description": "URL to download the file from"
+          }
+        }
+      }
+    }
+  }
+}
